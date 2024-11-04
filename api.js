@@ -4,16 +4,23 @@ function getArticles() {
   return axios
     .get(`https://nc-news-j09w.onrender.com/api/articles`)
     .then(({ data }) => {
-      // handle success
-      return ({ data });
+      return { data };
     })
     .catch((error) => {
-      // handle error
-      return(error);
+      return error;
     });
 }
 
-export default getArticles
+function getSingleArticle(article_id) {
+  return axios
+    .get(`https://nc-news-j09w.onrender.com/api/articles/${article_id}`)
+    .then(({ data }) => {
+      return { data };
+    })
+    .catch((error) => {
+      return error;
+    });
+}
 
-
-
+export default getArticles;
+export {getSingleArticle}
