@@ -1,19 +1,19 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "https://nc-news-j09w.onrender.com/api" });
-
 function getArticles() {
-  return api
-    .get(`/articles`)
+  return axios
+    .get(`https://nc-news-j09w.onrender.com/api/articles`)
     .then(({ data }) => {
       // handle success
-      console.log({ data });
+      return ({ data });
     })
     .catch((error) => {
       // handle error
-      console.error(error);
+      return(error);
     });
 }
 
-export default getArticles;
-export { goHome };
+export default getArticles
+
+
+

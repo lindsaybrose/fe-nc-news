@@ -22,7 +22,6 @@ body {
 }
 
 .header {
-  background-color: ;
   font-size: 40px;
   font-weight: 200;
   text-align: center;
@@ -40,4 +39,22 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+}
+
+.article {
+  border: solid 5px black;
+  margin: 20px;
+  padding: 20px;
+  background-color: #77c7c6;
+  opacity: 70%;
+}
+
+.article-img{
+  height: 200px;
+
+}
+
+.article-title{
+  padding: 10px;
+  font-size: 25px;
 }
