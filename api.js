@@ -22,5 +22,18 @@ function getSingleArticle(article_id) {
     });
 }
 
+function getComments(article_id) {
+  return axios
+    .get(
+      `https://nc-news-j09w.onrender.com/api/articles/${article_id}/comments`
+    )
+    .then(({ data }) => {
+      return { data };
+    })
+    .catch((error) => {
+      return error;
+    });
+}
+
 export default getArticles;
-export { getSingleArticle };
+export { getSingleArticle, getComments };
