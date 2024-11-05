@@ -1,7 +1,7 @@
 import React from "react";
 import getArticles from "../../api";
 import { useState, useEffect } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Articles() {
   const [article, setArticle] = useState([]);

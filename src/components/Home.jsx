@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
   return (
     <div className="home">
-      <p> Welcome to NC Marketplace!</p>
+      <h2> Check out our cool news site! </h2>
     </div>
   );
 }
