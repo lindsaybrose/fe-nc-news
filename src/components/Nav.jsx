@@ -1,10 +1,6 @@
 import React from "react";
-import { Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Articles from "./Articles";
-import Topics from "./Topics";
-import Home from "./Home";
-import getArticles from "../../api";
+
 
 function Nav() {
   return (

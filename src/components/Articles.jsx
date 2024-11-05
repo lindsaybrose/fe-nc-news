@@ -1,8 +1,7 @@
 import React from "react";
 import getArticles from "../../api";
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import SingleArticle from "./SingleArticle";
+import { useNavigate} from "react-router-dom";
 
 function Articles() {
   const [article, setArticle] = useState([]);
