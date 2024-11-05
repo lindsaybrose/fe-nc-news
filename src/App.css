@@ -13,6 +13,7 @@ body {
   background: #50a3a2;
   width: 100%;
   height: 100%;
+  font-size: 150%;
 }
 
 .container {
@@ -22,7 +23,7 @@ body {
 }
 
 .header {
-  font-size: 60px;
+  font-size: 300%;
   font-weight: 200;
   text-align: center;
 }
@@ -30,43 +31,75 @@ body {
 .nav-bar {
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1% 1%;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 150%;
 }
 
 .nav-link {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
   text-align: center;
 }
 
 .article {
   border: solid 5px black;
-  margin: 20px;
-  padding: 20px;
-  background-color: #77c7c6;
+  margin: 5%;
+  padding: 1%;
+  background-color: #bedcdb;
   opacity: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.article-img{
-  height: 200px;
-  padding: 10px;
-
+.article-img {
+  width: 30%;
+  padding-top: 1%;
+  padding: 2%;
+  align-items: center;
 }
 
-.article-title{
-  padding: 20px;
-  font-size: 25px;
+.article-title {
+  padding: 2%;
+  font-size: 150%;
+  color: black;
+  font-weight: 100;
 }
 
 .article-button {
-  padding: 10px;
-  margin: 10px;
-  font-size: 15px;
+  width: 10%;
+  padding: 1%;
+  margin: 1%;
+  font-size: 100%;
 }
 
 .article-button:hover {
   border: solid black 2px;
   box-shadow: -5px 5px 5px rgb(18, 141, 22);
+}
+
+.article-information {
+  background-color: #054d4c;
+  border: solid black 5%;
+  width: 30%;
+  padding: 10px;
+}
+
+.article-body {
+  color: black;
+  padding: 15px;
+}
+
+.article-author {
+  padding: 5px;
+}
+
+.article-date {
+  padding: 5px;
+}
+
+.article-votes {
+  padding: 5px;
 }

@@ -23,4 +23,4 @@ function getSingleArticle(article_id) {
 }
 
 export default getArticles;
-export {getSingleArticle}
+export { getSingleArticle };
