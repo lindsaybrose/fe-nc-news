@@ -13,7 +13,6 @@ function Nav() {
       <Link to="/" className='nav-link'>Home</Link>
       <Link to="/topics" className='nav-link'>Topics</Link>
       <Link to="/articles" className='nav-link'> Articles</Link>
-      <Link to="/articles/:article_id" element={article_id} className='article-link' />
     </nav>
 }
 
