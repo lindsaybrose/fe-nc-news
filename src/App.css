@@ -111,8 +111,8 @@ body {
 
 .article-votes {
   font-size: 50%;
-  margin-top: 2%;
   font-size: 18px;
+  margin-bottom: 1%;
 }
 
 .comment {
@@ -127,4 +127,14 @@ body {
 .comments-header {
   margin: 10%;
   color: black;
+}
+
+.vote-button {
+  width: 50px;
+
+}
+
+.vote-button:hover {
+  border: dashed rgb(219, 133, 133) 2px;
+  box-shadow: -5px 5px 5px rgb(141, 27, 17);
 }
