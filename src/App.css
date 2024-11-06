@@ -1,3 +1,23 @@
+.App {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content auto auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content";
+}
+
+@media only screen and (min-width: 600px) {
+  .App {
+    grid-template-columns: 25% 75%;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+      "header header"
+      "nav content";
+  }
+}
+
 * {
   font-family: monospace;
   box-sizing: border-box;
@@ -123,11 +143,27 @@ body {
   margin-top: 1%;
   background-color: white;
   color: black;
-  font-size: 20px;
+  font-size: 18px;}
+
+.comment-info {
+  padding: 2%;
+  color:rgb(8, 68, 94);
+  font-size: 15px;
+}
+
+.comment-button{
+  padding: 1%;
+  margin-top: 3%;
+  font-size: 60%;
+}
+
+.comment-button:hover {
+  border: solid black 2px;
+  box-shadow: -5px 5px 5px rgb(18, 141, 22);
 }
 
 .comments-header {
-  margin: 10%;
+  margin: 5%;
   color: black;
 }
 

@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getComments, getSingleArticle, updateArticleVotes } from "../../api";
+import { getComments, getSingleArticle, updateArticleVotes} from "../../api";
+import AddComment from "./AddComment";
 
 function SingleArticle() {
   const { article_id } = useParams();
@@ -44,8 +45,9 @@ function SingleArticle() {
       return (
         <section key={comment.comment_id} className="comment">
           <p className="comment-body">{comment.body}</p>
-          <p className="comment-author">User: {comment.author}</p>
-          <p className="comment-votes">Likes: {comment.votes}</p>
+          <p className="comment-info">User: {comment.author}</p>
+            <img width='30px' src="https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png"/> 
+            <p className="comment-info"> {comment.votes}</p>
         </section>
       );
     });
@@ -80,6 +82,7 @@ function SingleArticle() {
           <p className="article-author">User: {article.author}</p>
           <p className="article-date">Posted: {formatArticleDate}</p>
         </section>
+          <AddComment comments={comments}/>
         <h3 className="comments-header">Comments</h3>
         {returnComments()}
       </div>
