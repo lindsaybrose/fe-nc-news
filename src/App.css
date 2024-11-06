@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-  font-size: 2rem;
+  font-size: 30px;
   font-weight: 200;
   text-align: center;
 }
@@ -35,7 +35,7 @@ body {
   justify-content: space-around;
   padding: 1% 1%;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .nav-link {
@@ -66,7 +66,7 @@ body {
 
 .article-title {
   padding: 2%;
-  font-size: 70%;
+  font-size: 20px;
   color: black;
   font-weight: 100;
 }
@@ -85,6 +85,7 @@ body {
 .article-information {
   background-color: #054d4c;
   border: solid black 5%;
+  padding: 1%;
   width: 100%;
   height: 10%;
 }
@@ -92,23 +93,26 @@ body {
 .article-body {
   color: black;
   padding: 15px;
-  font-size: 50%;
+  font-size: 20px;
 }
 
 .article-author {
   font-size: 50%;
   margin-bottom: 2%;
+  font-size: 18px;
 }
 
 .article-date {
   font-size: 50%;
   margin-bottom: 2%;
   margin-top: 2%;
+  font-size: 18px;
 }
 
 .article-votes {
   font-size: 50%;
   margin-top: 2%;
+  font-size: 18px;
 }
 
 .comment {
@@ -117,7 +121,7 @@ body {
   margin-top: 1%;
   background-color: white;
   color: black;
-  font-size: 50%;
+  font-size: 20px;
 }
 
 .comments-header {
