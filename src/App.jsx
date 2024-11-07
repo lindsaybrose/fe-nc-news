@@ -6,10 +6,17 @@ import Nav from "./components/Nav";
 import Articles from "./components/Articles";
 import Home from "./components/Home";
 import SingleArticle from "./components/SingleArticle";
+import { useState, useContext } from "react";
+import { createContext } from 'react';
+
+const UserContext = createContext('');
+
 
 function App() {
+  const [signedInUser, setSignedInUser] =useState('grumpy19')
   return (
-    <div className="container">
+    <UserContext.Provider value={{signedInUser, setSignedInUser}}>
+    <main className="container">
       <Header />
       <Nav />
       <Routes>
@@ -17,7 +24,8 @@ function App() {
         <Route path="/articles" element={<Articles />} />
         <Route path="articles/:article_id" element={<SingleArticle />} />
       </Routes>
-    </div>
+    </main>
+    </UserContext.Provider>
   );
 }
 

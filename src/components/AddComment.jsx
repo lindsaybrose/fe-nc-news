@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { postComment } from "../../api";
 
@@ -14,7 +14,6 @@ function AddComment({ article_id }) {
 
   return (
     <>
-      <p>{loadedError}</p>
       <form className="comment-form" onSubmit={handleSubmit}>
         <textarea
           className="comment-form"
