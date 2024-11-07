@@ -43,10 +43,16 @@ function updateArticleVotes(article_id) {
   );
 }
 
-function postComment(article_id) {
+function postComment(article_id, userName, newComment) {
   return axios
-  .post(`https://nc-news-j09w.onrender.com/api/articles/${article_id}/comments`)
+  .post(`https://nc-news-j09w.onrender.com/api/articles/${article_id}/comments`, {username: userName, body: newComment})
+  .then((response) => {return response})
+  .catch((error) => {
+    return error;
+  });
 }
 
 export default getArticles;
 export { getSingleArticle, getComments, updateArticleVotes, postComment };
+
+

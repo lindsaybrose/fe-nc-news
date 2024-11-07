@@ -176,3 +176,13 @@ body {
   border: dashed rgb(219, 133, 133) 2px;
   box-shadow: -5px 5px 5px rgb(141, 27, 17);
 }
+
+.comment-form {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

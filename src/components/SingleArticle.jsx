@@ -26,7 +26,7 @@ function SingleArticle() {
     getComments(article_id).then(({ data }) => {
       setComments(data.comments);
     });
-  }, [article_id]);
+  }, [comments]);
 
   function incrementVotes() {
     setArticleVotes((currVotes) => {
@@ -82,7 +82,7 @@ function SingleArticle() {
           <p className="article-author">User: {article.author}</p>
           <p className="article-date">Posted: {formatArticleDate}</p>
         </section>
-          <AddComment comments={comments}/>
+          <AddComment article_id={article.article_id}/>
         <h3 className="comments-header">Comments</h3>
         {returnComments()}
       </div>

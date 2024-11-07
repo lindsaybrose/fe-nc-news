@@ -2,46 +2,34 @@ import React from "react";
 import { useState } from "react";
 import { postComment } from "../../api";
 
-function AddComment({ comments }) {
-  const [newComment, setNewComment] = useState({
-    body: "",
-    article_id: comments[0].article_id,
-    author: "",
-  });
+function AddComment({ article_id }) {
+  const [newComment, setNewComment] = useState("");
+  const [errorMsg, setErrorMsg] = useState('')
+  const userName = "grumpy19";
 
-  function handleChanges(event) {
-    event.preventDefault();
-    setNewComment({ ...newComment, [event.target.name]: [event.target.value] });
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    postComment(article_id)
+    postComment(article_id, userName, newComment)
+    setNewComment("")
   }
 
-  return (
-    <div>
-      <form className="comment-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          name='author'
-          onChange={(event) => handleChanges(event)}
-          required
-        >
-        </input>
-        <textarea
-          name="body"
-          rows={4}
-          cols={40}
-          placeholder="Comment"
-          onChange={(event) => handleChanges(event)}
-          required
-        />
-        <br />
-        <button type="submit">Add Comment</button>
-      </form>
-    </div>
+  
+    <form className="comment-form" onSubmit={handleSubmit}>
+      <textarea
+        className="comment-form"
+        name="body"
+        rows={4}
+        cols={40}
+        placeholder="Comment"
+        value={newComment}
+        onChange={(event) => setNewComment(event.target.value)}
+        required
+      />
+      <br />
+      <button type="submit">Add Comment</button>
+    </form>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ function Articles() {
     setIsLoading(true);
     getArticles().then(({ data }) => {
       setArticle(data.articles);
-      setIsLoading(false);
+      setIsLoading(false)
     });
   }, []);
 
