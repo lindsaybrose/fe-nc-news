@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getComments, getSingleArticle, updateArticleVotes} from "../../api";
+import { getComments, getSingleArticle, updateArticleVotes } from "../../api";
 import AddComment from "./AddComment";
 
 function SingleArticle() {
@@ -10,7 +10,7 @@ function SingleArticle() {
   const [isLoading, setIsLoading] = useState(true);
   const [comments, setComments] = useState([]);
   const [articleVotes, setArticleVotes] = useState(0);
-  const [voteError, setVoteError] = useState('');
+  const [voteError, setVoteError] = useState("");
   const articleDate = new Date(article.created_at);
   const formatArticleDate = articleDate.toLocaleString();
 
@@ -35,8 +35,8 @@ function SingleArticle() {
     updateArticleVotes(article.article_id).catch(() => {
       setArticleVotes((currVotes) => {
         return currVotes - 1;
-      })
-      setVoteError('oh no - please try again!')
+      });
+      setVoteError("oh no - please try again!");
     });
   }
 
@@ -46,8 +46,11 @@ function SingleArticle() {
         <section key={comment.comment_id} className="comment">
           <p className="comment-body">{comment.body}</p>
           <p className="comment-info">User: {comment.author}</p>
-            <img width='30px' src="https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png"/> 
-            <p className="comment-info"> {comment.votes}</p>
+          <img
+            width="30px"
+            src="https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png"
+          />
+          <p className="comment-info"> {comment.votes}</p>
         </section>
       );
     });
@@ -82,7 +85,7 @@ function SingleArticle() {
           <p className="article-author">User: {article.author}</p>
           <p className="article-date">Posted: {formatArticleDate}</p>
         </section>
-          <AddComment article_id={article.article_id}/>
+        <AddComment article_id={article.article_id} />
         <h3 className="comments-header">Comments</h3>
         {returnComments()}
       </div>
