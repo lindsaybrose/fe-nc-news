@@ -143,15 +143,16 @@ body {
   margin-top: 1%;
   background-color: white;
   color: black;
-  font-size: 18px;}
+  font-size: 18px;
+}
 
 .comment-info {
   padding: 2%;
-  color:rgb(8, 68, 94);
+  color: rgb(8, 68, 94);
   font-size: 15px;
 }
 
-.comment-button{
+.comment-button {
   padding: 1%;
   margin-top: 3%;
   font-size: 60%;
@@ -169,7 +170,6 @@ body {
 
 .vote-button {
   width: 50px;
-
 }
 
 .vote-button:hover {
@@ -185,4 +185,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.delete-message {
+  font-size: 60%;
+  padding: 1%;
 }

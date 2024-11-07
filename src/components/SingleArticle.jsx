@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getComments, getSingleArticle, updateArticleVotes } from "../../api";
 import AddComment from "./AddComment";
+import DeleteComment from "./DeleteComment";
+import Users from "./Users";
 
 function SingleArticle() {
   const { article_id } = useParams();
@@ -11,6 +13,7 @@ function SingleArticle() {
   const [comments, setComments] = useState([]);
   const [articleVotes, setArticleVotes] = useState(0);
   const [voteError, setVoteError] = useState("");
+  const [deleteComment, setDeleteComment] = useState();
   const articleDate = new Date(article.created_at);
   const formatArticleDate = articleDate.toLocaleString();
 
@@ -51,6 +54,7 @@ function SingleArticle() {
             src="https://png.pngtree.com/png-vector/20220428/ourmid/pngtree-smooth-glossy-heart-vector-file-ai-and-png-png-image_4557871.png"
           />
           <p className="comment-info"> {comment.votes}</p>
+          <DeleteComment comment={comment} />
         </section>
       );
     });
