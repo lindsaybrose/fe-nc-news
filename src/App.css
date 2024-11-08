@@ -30,7 +30,7 @@ body {
   font-family: monospace;
   color: white;
   font-weight: 300;
-  background: #50a3a2;
+  background-color: rgb(9, 105, 73);
   width: 100%;
   height: 100%;
   font-size: 150%;
@@ -190,4 +190,19 @@ body {
 .delete-message {
   font-size: 60%;
   padding: 1%;
+}
+
+.topic-button {
+  padding: 1%;
+  margin-top: 3%;
+  font-size: 60%;
+  background-color: #054d4c;
+  height: 80%;
+  width: 80%;
+  box-shadow: -5px 5px 5px rgb(12, 128, 70);
+}
+
+.topic-button:hover {
+  border: dashed rgb(219, 133, 133) 2px;
+  box-shadow: -5px 5px 5px rgb(141, 27, 17);
 }

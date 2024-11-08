@@ -1,16 +1,19 @@
 import React from "react";
 import getArticles from "../../api";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import Topics from "./Topics";
 
 function Articles() {
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const { topic } = useParams();
 
   useEffect(() => {
+    
     setIsLoading(true);
-    getArticles().then(({ data }) => {
+    getArticles(topic).then(({ data }) => {
       setArticle(data.articles);
       setIsLoading(false);
     });

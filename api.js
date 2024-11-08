@@ -1,8 +1,10 @@
 import axios from "axios";
 
-function getArticles() {
+function getArticles(topic) {
   return axios
-    .get(`https://nc-news-j09w.onrender.com/api/articles`)
+    .get(`https://nc-news-j09w.onrender.com/api/articles`, {
+      params: { topic: topic },
+    })
     .then(({ data }) => {
       return { data };
     })
@@ -78,6 +80,17 @@ function getUsers() {
     });
 }
 
+function getTopics() {
+  return axios
+    .get(`https://nc-news-j09w.onrender.com/api/topics`)
+    .then(({ data }) => {
+      return { data };
+    })
+    .catch((error) => {
+      return error;
+    });
+}
+
 export default getArticles;
 export {
   getSingleArticle,
@@ -86,4 +99,5 @@ export {
   postComment,
   deleteComment,
   getUsers,
+  getTopics,
 };
