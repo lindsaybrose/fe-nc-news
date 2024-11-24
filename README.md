@@ -1,3 +1,5 @@
+Apologies - the site does take a moment to render with Render.com.
+
 Please use the following URL to see the finished site: https://674326bbe83ec700086b6408--lindsaybrose-ncnews.netlify.app/
 
 This app links together the skills learned in Northcoders for both backend and frontend. 
