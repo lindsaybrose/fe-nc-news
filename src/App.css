@@ -26,6 +26,12 @@
   font-weight: 300;
 }
 
+.home {
+  margin-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 body {
   font-family: monospace;
   color: white;
@@ -45,7 +51,10 @@ body {
 .header {
   font-size: 30px;
   font-weight: 200;
+  padding-top: 5%;
+  margin-top: -10%;
   text-align: center;
+  background-color: #ca7711;
 }
 
 .nav {
@@ -54,10 +63,15 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 1% 1%;
+
   text-decoration: none;
   font-size: 30px;
+  background-color: #ca7711;
 }
 
+.loading {
+  margin-top: 5%;
+}
 .nav-link {
   margin-top: 2%;
   padding-left: 2%;
@@ -192,17 +206,32 @@ body {
   padding: 1%;
 }
 
+.topic {
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 4%;
+}
+
 .topic-button {
-  padding: 1%;
+  padding: 5%;
   margin-top: 3%;
-  font-size: 60%;
-  background-color: #054d4c;
+  color: white;
+  font-size: 100%;
+  border-radius: 12px;
+  background-color: #ca7711;
   height: 80%;
   width: 80%;
   box-shadow: -5px 5px 5px rgb(12, 128, 70);
 }
 
 .topic-button:hover {
-  border: dashed rgb(219, 133, 133) 2px;
-  box-shadow: -5px 5px 5px rgb(141, 27, 17);
+  border: dashed #386641 2px;
+  box-shadow: -5px 5px 5px #113d1a;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  padding-left: 3%;
+  padding-right: 3%;
 }

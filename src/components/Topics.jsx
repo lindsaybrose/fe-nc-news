@@ -18,13 +18,13 @@ function Topics() {
 
   if (isLoading) {
     return (
-      <>
+      <div class="loading">
         <p> Topics on their way! </p>
         <img
           src="https://media.tenor.com/HoocNDDrUKgAAAAj/rexx.gif"
           alt="cartoon on phone gif"
         />
-      </>
+      </div>
     );
   }
 

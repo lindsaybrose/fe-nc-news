@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 function Nav() {
-  const topic = useParams()
+  const topic = useParams();
   return (
     <nav className="nav">
       <Link to="/" className="nav-link">

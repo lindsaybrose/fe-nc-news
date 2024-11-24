@@ -11,7 +11,6 @@ function Articles() {
   const { topic } = useParams();
 
   useEffect(() => {
-    
     setIsLoading(true);
     getArticles(topic).then(({ data }) => {
       setArticle(data.articles);
@@ -21,13 +20,13 @@ function Articles() {
 
   if (isLoading) {
     return (
-      <>
+      <div class="loading">
         <p> Articles on their way! </p>
         <img
           src="https://media.tenor.com/HoocNDDrUKgAAAAj/rexx.gif"
           alt="cartoon on phone gif"
         />
-      </>
+      </div>
     );
   }
 
